@@ -1,0 +1,218 @@
+body {
+    background-color: #040404;
+    color: white;
+}
+
+/* Start Navbar */
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-brand {
+    font-family: Viga;
+    font-size: 32px;
+}
+
+/* Utility */
+.tombol {
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-image: url(img/coffe.jpg);
+    background-size: cover;
+    height: 540px;
+    text-align: center;
+    position: relative;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 70%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron .display-4 {
+    color: hsl(0, 0%, 100%);
+    margin-top: 150px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.jumbotron .display-4 span {
+    font-weight: 500;
+}
+
+.working-space {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.working-space h3 {
+    font-size: 52px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.working-space h3 span {
+    font-weight: 500;
+}
+
+.working-space p {
+    font-size: 18px;
+    color: #ACACAC;
+    font-weight: 200;
+    margin: 25px 0;
+}
+
+.testimonial {
+    margin-top: 80px;
+}
+
+.testimonial h5 {
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.testimonial figure img {
+    width: 60px;
+    opacity: 0.7;
+    margin: 20px 10px 10px;
+}
+
+.testimonial figure img.utama {
+    width: 90px;
+    opacity: 1;
+    margin-top: 5px;
+}
+
+.testimonial figure h5 {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: #1C2C5D;
+}
+
+.testimonial figure p {
+    font-size: 12px;
+    color: #ACACAC;
+    margin-top: -5px;
+}
+
+.testimonial figcaption {
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    margin-top: 100px;
+}
+
+.footer p {
+    color: #ACACAC;
+    font-size: 18px;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    .navbar-brand, .nav-link {
+        color: rgb(255, 255, 255) !important;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    }
+
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #0B63DC;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .jumbotron {
+        margin-top: -75px;
+        height: 640px;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 62px;
+    }
+
+    .working-space {
+        text-align: left;
+        padding-top: 100px;
+    }
+}
+
+/* Mobile Version */
+@media (max-width: 991px) {
+    .navbar {
+        background-color: #fff !important; /* Warna latar navbar putih */
+    }
+
+    .navbar-brand, .nav-link {
+        color: #000 !important; /* Warna teks hitam */
+    }
+}
+
+.about-section {
+    align-items: center;
+    padding-top: 120px;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.about-section img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
